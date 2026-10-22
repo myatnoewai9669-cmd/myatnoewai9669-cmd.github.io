@@ -1,153 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Myat Noe Wai – Full-Stack Developer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Myat Noe Wai — Full-Stack Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
 <style>
-:root{--bg:#0d1220;--panel:#141b2e;--line:#243049;--text:#eef2fa;--mute:#9aa7c0;--accent:#8db8f0;--ink:#0d1220;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
-*,*::before,*::after{box-sizing:inherit}
-html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;background:var(--bg);color:var(--text);font-family:"Space Grotesk",system-ui,sans-serif;line-height:1.6}
-a{color:var(--accent)}
-a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.wrap{max-width:900px;margin:0 auto;padding:0 22px}
-.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 22px;gap:24px}
-.pill{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);border:1px solid var(--line);background:var(--panel);padding:9px 20px;border-radius:99px}
-h1{font-family:"Playfair Display",Georgia,serif;font-size:clamp(2.6rem,9vw,5.6rem);line-height:1.05;margin:0;font-weight:700}
-h1 em{font-style:italic}
-.sub{max-width:640px;color:var(--mute);margin:0;font-size:1.05rem}
-.btns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
-.btn{padding:13px 26px;border-radius:10px;text-decoration:none;font-weight:600;border:1px solid var(--line);color:var(--text)}
-.btn.main{background:var(--accent);color:var(--ink);border-color:var(--accent)}
-.scroll{color:var(--mute);font-size:.7rem;letter-spacing:.2em;margin-top:20px}
-.scroll::after{content:"";display:block;width:1px;height:46px;background:var(--mute);margin:10px auto 0}
-section{padding:70px 0;border-top:1px solid var(--line)}
-h2{font-family:"Playfair Display",Georgia,serif;font-size:2rem;margin:0 0 28px}
-.skills{display:grid;grid-template-columns:150px 1fr;gap:14px 20px;align-items:start}
-.skills dt{color:var(--mute)}
-.skills dd{margin:0;display:flex;flex-wrap:wrap;gap:8px}
-.tag{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:3px 11px;font-size:.85rem}
-.proj{display:grid;gap:18px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
-.card h3{margin:0 0 4px;font-size:1.2rem}
-.card p{margin:8px 0 14px;color:var(--mute)}
-.card .tags{display:flex;flex-wrap:wrap;gap:8px}
-.card a.live{font-size:.9rem;word-break:break-all}
-.row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:14px 0;border-bottom:1px solid var(--line)}
-.row span:last-child{color:var(--mute)}
-.certs{columns:2;column-gap:30px;padding-left:18px;margin:0}
-.certs li{margin-bottom:8px;break-inside:avoid}
-.contact a{display:block;padding:6px 0;word-break:break-all}
-footer{padding:36px 22px;text-align:center;color:var(--mute);font-size:.85rem;border-top:1px solid var(--line)}
-@media(max-width:620px){.skills{grid-template-columns:1fr;gap:6px}.skills dd{margin-bottom:12px}.certs{columns:1}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+:root{--bg:#0A1410;--surface:#0F1D17;--card:#14271E;--accent:#22A06B;--accent2:#5EE0A0;--gold:#F4C95D;--text:#E8F0EC;--muted:#8AA399;--border:rgba(34,160,107,0.25);--font-display:'Playfair Display',Georgia,serif;--font-body:'Space Grotesk',system-ui,sans-serif;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:16px;line-height:1.7;overflow-x:hidden}
+a:focus-visible{outline:2px solid var(--accent2);outline-offset:3px}
+nav{position:fixed;top:0;width:100%;z-index:100;padding-top:env(safe-area-inset-top,0px);background:rgba(10,20,16,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-row{padding:0 2rem;display:flex;justify-content:space-between;align-items:center;height:64px}
+.nav-logo{font-family:var(--font-display);font-size:1.3rem;color:var(--accent2);text-decoration:none}
+.nav-links{display:flex;gap:1.6rem;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.85rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover{color:var(--accent2)}
+#hero{min-height:100vh;display:grid;place-items:center;padding:100px 2rem 4rem;position:relative;overflow:hidden}
+.hero-glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(34,160,107,.18) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+.hero-inner{text-align:center;position:relative;max-width:780px}
+.hero-badge{display:inline-block;border:1px solid var(--border);color:var(--accent2);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;padding:.4rem 1.2rem;border-radius:999px;margin-bottom:1.8rem;background:rgba(34,160,107,.1)}
+.hero-name{font-family:var(--font-display);font-size:clamp(2.8rem,9vw,5.5rem);line-height:1.1;margin-bottom:.5rem}
+.hero-name em{font-style:italic;color:var(--accent2)}
+.hero-tagline{font-size:clamp(1rem,2.5vw,1.2rem);color:var(--muted);margin-bottom:2.5rem;font-weight:300}
+.hero-cta{display:inline-flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.btn{display:inline-block;padding:.75rem 1.8rem;border-radius:8px;font-family:var(--font-body);font-size:.9rem;font-weight:600;text-decoration:none;transition:all .2s;cursor:pointer;border:none}
+.btn-primary{background:var(--accent);color:#04120B}
+.btn-primary:hover{background:var(--accent2);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--accent2);border:1px solid var(--border)}
+.btn-ghost:hover{background:rgba(34,160,107,.12);transform:translateY(-2px)}
+.scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);color:var(--muted);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:.5rem;animation:bounce 2s infinite}
+.scroll-hint::after{content:'';width:1px;height:40px;background:linear-gradient(to bottom,var(--muted),transparent)}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+@media(prefers-reduced-motion:reduce){.scroll-hint{animation:none}html{scroll-behavior:auto}}
+section{padding:6rem 2rem}
+.container{max-width:1100px;margin:0 auto}
+.section-label{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent2);margin-bottom:.75rem;font-weight:600}
+.section-title{font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);margin-bottom:1rem}
+.section-subtitle{color:var(--muted);max-width:580px;margin-bottom:3rem;font-size:1.05rem}
+.divider{width:60px;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:999px;margin-bottom:1rem}
+#about,#education,#language{background:var(--surface)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.about-text p{color:var(--muted);margin-bottom:1.2rem}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;text-align:center}
+.stat-num{font-family:var(--font-display);font-size:2.2rem;color:var(--accent2);display:block;line-height:1;margin-bottom:.3rem}
+.stat-label{color:var(--muted);font-size:.8rem;text-transform:uppercase;letter-spacing:.1em}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.skill-group{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.8rem;transition:border-color .2s}
+.skill-group:hover{border-color:var(--accent)}
+.skill-group-icon{font-size:1.8rem;margin-bottom:1rem}
+.skill-group h3{font-size:1rem;font-weight:600;margin-bottom:1rem}
+.skill-tags,.project-stack,.cert-list{display:flex;flex-wrap:wrap;gap:.5rem}
+.tag{background:rgba(34,160,107,.14);color:var(--accent2);border:1px solid rgba(94,224,160,.28);font-size:.78rem;padding:.3rem .75rem;border-radius:6px;font-weight:500}
+.tag.python{background:rgba(244,201,93,.12);color:var(--gold);border-color:rgba(244,201,93,.3)}
+.edu-timeline{position:relative}
+.edu-timeline::before{content:'';position:absolute;left:20px;top:8px;bottom:8px;width:1px;background:var(--border)}
+.edu-item{display:flex;gap:2rem;margin-bottom:2.5rem;padding-left:1rem}
+.edu-item:last-child{margin-bottom:0}
+.edu-dot{min-width:40px;height:40px;border-radius:50%;background:var(--card);border:2px solid var(--accent);display:grid;place-items:center;color:var(--accent2);flex-shrink:0;position:relative;z-index:1}
+.edu-content{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.4rem 1.6rem;flex:1;transition:border-color .2s}
+.edu-content:hover{border-color:var(--accent)}
+.edu-year{font-size:.75rem;color:var(--accent2);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.3rem}
+.edu-school{font-weight:600;margin-bottom:.2rem}
+.edu-degree{color:var(--muted);font-size:.9rem}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+.project-card{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:transform .2s,border-color .2s}
+.project-card:hover{transform:translateY(-4px);border-color:var(--accent)}
+.project-header{height:120px;display:grid;place-items:center;font-size:3rem}
+.p1{background:linear-gradient(135deg,#14271E,#1B4A35)}
+.p2{background:linear-gradient(135deg,#14271E,#1F4040)}
+.p3{background:linear-gradient(135deg,#14271E,#2E4A22)}
+.p4{background:linear-gradient(135deg,#14271E,#2A3F2A)}
+.p5{background:linear-gradient(135deg,#14271E,#164A4A)}
+.p6{background:linear-gradient(135deg,#14271E,#244A3A)}
+.project-body{padding:1.5rem}
+.project-body h3{font-size:1.05rem;font-weight:600;margin-bottom:.5rem}
+.project-body p{color:var(--muted);font-size:.875rem;margin-bottom:1rem}
+.project-stack{margin-bottom:.9rem}
+.project-link{font-size:.85rem;color:var(--accent2);text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:1px;word-break:break-all}
+.cert-list .tag{padding:.5rem .9rem;font-size:.82rem}
+.exp-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.8rem;max-width:700px}
+.exp-card h3{font-size:1.1rem;margin-bottom:.2rem}
+.exp-card .edu-year{margin-bottom:.8rem}
+.exp-card p{color:var(--muted)}
+.lang-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem}
+.lang-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.8rem;text-align:center}
+.lang-name{font-weight:600;margin-bottom:.25rem}
+.lang-level{color:var(--muted);font-size:.85rem;margin-bottom:1rem}
+.lang-bar-wrap{background:rgba(255,255,255,.07);border-radius:999px;height:6px;overflow:hidden}
+.lang-bar{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.contact-info p{color:var(--muted)}
+.contact-links{display:flex;flex-direction:column;gap:1rem}
+.contact-link{display:flex;align-items:center;gap:1rem;text-decoration:none;color:var(--muted);background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1rem 1.2rem;transition:all .2s;word-break:break-all}
+.contact-link:hover{color:var(--accent2);border-color:var(--accent)}
+.contact-link-title{font-weight:600;color:var(--text)}
+.contact-link-sub{font-size:.85rem}
+footer{text-align:center;padding:2.5rem 2rem;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}
+footer span{color:var(--accent2)}
+@media(max-width:768px){.about-grid,.contact-grid{grid-template-columns:1fr;gap:2rem}.nav-links{display:none}section{padding:4.5rem 1.4rem}.edu-item{gap:1rem;padding-left:0}}
 </style>
 </head>
 <body>
-<header class="hero">
-  <div class="pill">Available for full-stack developer roles</div>
-  <h1>Myat Noe <em>Wai</em></h1>
-  <p class="sub">Full-Stack · Web · Software · Front-End · PHP · Python Developer. Information Systems student in Sukabumi, Indonesia, from Myanmar. Open to remote, full-time and freelance roles.</p>
-  <div class="btns"><a class="btn main" href="#projects">View Projects</a><a class="btn" href="#contact">Get in Touch</a></div>
-  <div class="scroll">SCROLL</div>
-</header>
+<nav><div class="nav-row">
+<a class="nav-logo" href="#hero">Myat Noe Wai</a>
+<ul class="nav-links">
+<li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li>
+</ul></div></nav>
 
-<main class="wrap">
-<section id="profile">
-  <h2>Profile</h2>
-  <p>Self-taught developer and Information Systems student (GPA 3.75) with multiple live, deployed applications. I build responsive front-end interfaces (HTML, CSS, JavaScript) and PHP/MySQL back ends with REST APIs, including AI-powered features using IBM watsonx Granite and Hugging Face models. DataCamp-certified Python Developer Associate and Associate Data Engineer, with Python tools and AWS Boto3 experience.</p>
+<section id="hero">
+<div class="hero-glow"></div>
+<div class="hero-inner">
+<span class="hero-badge">Available for Full-Stack Developer Roles</span>
+<h1 class="hero-name">Myat Noe <em>Wai</em></h1>
+<p class="hero-tagline">Full-Stack · Web · Software · Front-End · PHP · Python Developer<br>Open to remote, full-time &amp; freelance roles</p>
+<div class="hero-cta"><a href="#projects" class="btn btn-primary">View Projects</a><a href="#contact" class="btn btn-ghost">Get in Touch</a></div>
+</div>
+<div class="scroll-hint">Scroll</div>
 </section>
 
-<section id="skills">
-  <h2>Technical skills</h2>
-  <dl class="skills">
-    <dt>Front-End</dt><dd><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Responsive Design</span><span class="tag">UX Design</span></dd>
-    <dt>Back-End</dt><dd><span class="tag">PHP</span><span class="tag">OOP</span><span class="tag">REST API</span><span class="tag">REST</span><span class="tag">JSON</span><span class="tag">Java</span></dd>
-    <dt>Database</dt><dd><span class="tag">MySQL</span><span class="tag">Database</span></dd>
-    <dt>Python</dt><dd><span class="tag">Python Flashcards</span><span class="tag">Python Tools</span><span class="tag">AWS Boto (Python)</span></dd>
-    <dt>Version Control</dt><dd><span class="tag">Git</span><span class="tag">GitHub</span></dd>
-    <dt>AI / APIs</dt><dd><span class="tag">IBM watsonx.ai (Granite)</span><span class="tag">Hugging Face API</span><span class="tag">Prompt Engineering</span></dd>
-  </dl>
-</section>
+<section id="about"><div class="container"><div class="about-grid">
+<div class="about-text">
+<p class="section-label">About Me</p><div class="divider"></div>
+<h2 class="section-title">Profile</h2>
+<p>Self-taught developer and Information Systems student (GPA 3.75) with multiple live, deployed applications. I build responsive front-end interfaces (HTML, CSS, JavaScript) and PHP/MySQL back ends with REST APIs, including AI-powered features using IBM watsonx Granite and Hugging Face models.</p>
+<p>DataCamp-certified Python Developer Associate and Associate Data Engineer, with Python tools and AWS Boto3 experience. Based in Sukabumi, Indonesia, originally from Myanmar.</p>
+<a href="mailto:myatmyatwai97@gmail.com" class="btn btn-primary" style="margin-top:1rem">Hire Me</a>
+</div>
+<div class="about-stats">
+<div class="stat-card"><span class="stat-num">3.75</span><span class="stat-label">GPA</span></div>
+<div class="stat-card"><span class="stat-num">6</span><span class="stat-label">Projects</span></div>
+<div class="stat-card"><span class="stat-num">15</span><span class="stat-label">Certificates</span></div>
+<div class="stat-card"><span class="stat-num">1 yr</span><span class="stat-label">Volunteer Teaching</span></div>
+</div></div></div></section>
 
-<section id="projects">
-  <h2>Projects (live demos)</h2>
-  <div class="proj">
-    <article class="card"><h3>Myatnoe Fashion (Fashio)</h3>
-      <p>Fashion e-commerce website with an 11-screen UI/UX design and a PHP/MySQL back end: login/register sessions, CRUD, cart, checkout and admin dashboard.</p>
-      <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">UI/UX</span></div>
-      <p style="margin-bottom:0"><a class="live" href="https://myatnoefashion.freedev.app" target="_blank" rel="noopener">myatnoefashion.freedev.app</a></p></article>
-    <article class="card"><h3>InkGuard AI</h3>
-      <p>AI content creation and safety platform with two engines: INK generates content and GUARD checks it for safety. Submitted to the IBM AI Builders Challenge and considered for the Most Innovative award.</p>
-      <div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">IBM watsonx.ai</span><span class="tag">Granite</span></div>
-      <p style="margin-bottom:0"><a class="live" href="https://ink.freedev.app" target="_blank" rel="noopener">ink.freedev.app</a></p></article>
-    <article class="card"><h3>Coding Mentor AI</h3>
-      <p>AI coding mentor with an AI Learning Roadmap, AI Project Evaluator and AI Resume Analyzer. Includes an admin analytics dashboard. Built for the IBM AI Builders Challenge.</p>
-      <div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">IBM watsonx.ai</span><span class="tag">Granite</span></div>
-      <p style="margin-bottom:0"><a class="live" href="https://noeaicodingmentor.infinityfreeapp.com" target="_blank" rel="noopener">noeaicodingmentor.infinityfreeapp.com</a></p></article>
-    <article class="card"><h3>RescuerNet AI</h3>
-      <p>Disaster early-warning platform for ASEAN countries, built for AI Youth Festa 2026.</p>
-      <div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span></div>
-      <p style="margin-bottom:0"><a class="live" href="https://rescuernet.infinityfreeapp.com" target="_blank" rel="noopener">rescuernet.infinityfreeapp.com</a></p></article>
-    <article class="card"><h3>ASEAN LanguageBridge AI</h3>
-      <p>Multilingual education platform making learning accessible across ASEAN languages.</p>
-      <div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Hugging Face</span></div></article>
-    <article class="card"><h3>AstroNode AI</h3>
-      <p>Natural-language query platform for astronomy data, built for the IBM AI Builders Challenge 2026.</p>
-      <div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span></div></article>
-  </div>
-</section>
+<section id="skills"><div class="container">
+<p class="section-label">What I Do</p><div class="divider"></div>
+<h2 class="section-title">Technical Skills</h2>
+<p class="section-subtitle">Front end, back end, database, Python and AI APIs.</p>
+<div class="skills-grid">
+<div class="skill-group"><div class="skill-group-icon">🌐</div><h3>Front-End</h3><div class="skill-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Responsive Design</span><span class="tag">UX Design</span></div></div>
+<div class="skill-group"><div class="skill-group-icon">⚙️</div><h3>Back-End</h3><div class="skill-tags"><span class="tag">PHP</span><span class="tag">OOP</span><span class="tag">REST API</span><span class="tag">REST</span><span class="tag">JSON</span><span class="tag">Java</span></div></div>
+<div class="skill-group"><div class="skill-group-icon">🗄️</div><h3>Database</h3><div class="skill-tags"><span class="tag">MySQL</span><span class="tag">Database</span></div></div>
+<div class="skill-group"><div class="skill-group-icon">🐍</div><h3>Python</h3><div class="skill-tags"><span class="tag python">Python Flashcards</span><span class="tag python">Python Tools</span><span class="tag python">AWS Boto (Python)</span></div></div>
+<div class="skill-group"><div class="skill-group-icon">🛠️</div><h3>Version Control</h3><div class="skill-tags"><span class="tag">Git</span><span class="tag">GitHub</span></div></div>
+<div class="skill-group"><div class="skill-group-icon">🤖</div><h3>AI / APIs</h3><div class="skill-tags"><span class="tag">IBM watsonx.ai (Granite)</span><span class="tag">Hugging Face API</span><span class="tag">Prompt Engineering</span></div></div>
+</div></div></section>
 
-<section id="education">
-  <h2>Education</h2>
-  <div class="row"><span><strong>Nusaputra University, Indonesia</strong><br>Bachelor’s in Information Systems (GPA 3.75)</span><span>2025 – 2029 (ongoing)</span></div>
-  <div class="row"><span><strong>SAT (2024) · GED (2023)</strong></span><span>2023 – 2024</span></div>
-  <div class="row"><span><strong>Dawei Agriculture College</strong> – High School, Myanmar</span><span>2019</span></div>
-</section>
+<section id="projects"><div class="container">
+<p class="section-label">What I've Built</p><div class="divider"></div>
+<h2 class="section-title">Projects</h2>
+<p class="section-subtitle">Live demos and AI-powered apps.</p>
+<div class="projects-grid">
+<div class="project-card"><div class="project-header p4">👜</div><div class="project-body"><h3>Myatnoe Fashion (Fashio)</h3><p>Fashion e-commerce website with an 11-screen UI/UX design and a PHP/MySQL back end: login/register sessions, CRUD, cart, checkout and admin dashboard.</p><div class="project-stack"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">UI/UX</span></div><a href="https://myatnoefashion.freedev.app" target="_blank" rel="noopener" class="project-link">myatnoefashion.freedev.app</a></div></div>
+<div class="project-card"><div class="project-header p1">🛡️</div><div class="project-body"><h3>InkGuard AI</h3><p>AI content creation and safety platform with two engines: INK generates content and GUARD checks it for safety. Submitted to the IBM AI Builders Challenge and considered for the Most Innovative award.</p><div class="project-stack"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">IBM watsonx.ai</span><span class="tag">Granite</span></div><a href="https://ink.freedev.app" target="_blank" rel="noopener" class="project-link">ink.freedev.app</a></div></div>
+<div class="project-card"><div class="project-header p2">🧑‍🏫</div><div class="project-body"><h3>Coding Mentor AI</h3><p>AI coding mentor with an AI Learning Roadmap, AI Project Evaluator and AI Resume Analyzer. Includes an admin analytics dashboard. Built for the IBM AI Builders Challenge.</p><div class="project-stack"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">IBM watsonx.ai</span><span class="tag">Granite</span></div><a href="https://noeaicodingmentor.infinityfreeapp.com" target="_blank" rel="noopener" class="project-link">noeaicodingmentor.infinityfreeapp.com</a></div></div>
+<div class="project-card"><div class="project-header p3">🚨</div><div class="project-body"><h3>RescuerNet AI</h3><p>Disaster early-warning platform for ASEAN countries, built for AI Youth Festa 2026.</p><div class="project-stack"><span class="tag">PHP</span><span class="tag">MySQL</span></div><a href="https://rescuernet.infinityfreeapp.com" target="_blank" rel="noopener" class="project-link">rescuernet.infinityfreeapp.com</a></div></div>
+<div class="project-card"><div class="project-header p5">🌏</div><div class="project-body"><h3>ASEAN LanguageBridge AI</h3><p>Multilingual education platform making learning accessible across ASEAN languages.</p><div class="project-stack"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Hugging Face</span></div></div></div>
+<div class="project-card"><div class="project-header p6">🔭</div><div class="project-body"><h3>AstroNode AI</h3><p>Natural-language query platform for astronomy data, built for the IBM AI Builders Challenge 2026.</p><div class="project-stack"><span class="tag">PHP</span><span class="tag">MySQL</span></div></div></div>
+</div></div></section>
 
-<section id="experience">
-  <h2>Experience</h2>
-  <div class="row"><span><strong>Volunteer Teacher</strong> – local community, Myanmar<br>Taught and mentored students, explaining concepts clearly and patiently.</span><span>1 year</span></div>
-</section>
+<section id="education"><div class="container">
+<p class="section-label">Academic Background</p><div class="divider"></div>
+<h2 class="section-title">Education</h2>
+<div class="edu-timeline">
+<div class="edu-item"><div class="edu-dot">🎓</div><div class="edu-content"><p class="edu-year">2025 – 2029 (ongoing)</p><p class="edu-school">Nusaputra University — Sukabumi, Indonesia</p><p class="edu-degree">Bachelor's in Information Systems · GPA 3.75</p></div></div>
+<div class="edu-item"><div class="edu-dot">📖</div><div class="edu-content"><p class="edu-year">2023 – 2024</p><p class="edu-school">SAT (2024) · GED (2023)</p><p class="edu-degree">General Education Development · SAT Examination</p></div></div>
+<div class="edu-item"><div class="edu-dot">📚</div><div class="edu-content"><p class="edu-year">2019</p><p class="edu-school">Dawei Agriculture College — Myanmar</p><p class="edu-degree">High School</p></div></div>
+</div></div></section>
 
-<section id="certifications">
-  <h2>Certifications</h2>
-  <ul class="certs">
-    <li>DataCamp: Python Developer Associate (Oct 2026)</li>
-    <li>DataCamp: Associate Data Engineer (Oct 2026)</li>
-    <li>Google UX Design Professional Certificate</li>
-    <li>EF SET English Certificate (Advanced, C1)</li>
-    <li>Global MOOC on the Ethics of AI (UNESCO)</li>
-    <li>Code Using IBM Bob</li>
-    <li>Open Source Community Orientation (LFC102)</li>
-    <li>AI Database Certificate</li>
-    <li>Foundation Associate</li>
-    <li>AI Interview Micro-Certificate</li>
-    <li>Accelerate Your Job Search with AI</li>
-    <li>Professional Networking for Career Growth</li>
-    <li>DataCamp: JavaScript (Basic &amp; Intermediate)</li>
-    <li>AWS Boto in Python</li>
-    <li>Meal Essentials Certificate</li>
-  </ul>
-</section>
+<section id="experience"><div class="container">
+<p class="section-label">Experience</p><div class="divider"></div>
+<h2 class="section-title">Volunteer Teaching</h2>
+<div class="exp-card"><h3>Volunteer Teacher</h3><p class="edu-year">Local community, Myanmar · 1 year</p><p>Taught and mentored students, explaining concepts clearly and patiently.</p></div>
+</div></section>
 
-<section id="languages">
-  <h2>Languages</h2>
-  <p><span class="tag">Burmese</span> <span class="tag">English (C1, EF SET certified)</span> <span class="tag">Indonesian (basic)</span></p>
-</section>
+<section id="certs" style="background:var(--surface)"><div class="container">
+<p class="section-label">Credentials</p><div class="divider"></div>
+<h2 class="section-title">Certifications</h2>
+<div class="cert-list">
+<span class="tag python">DataCamp: Python Developer Associate (Oct 2026)</span>
+<span class="tag python">DataCamp: Associate Data Engineer (Oct 2026)</span>
+<span class="tag">Google UX Design Professional Certificate</span>
+<span class="tag">EF SET English Certificate (Advanced, C1)</span>
+<span class="tag">Global MOOC on the Ethics of AI (UNESCO)</span>
+<span class="tag">Code Using IBM Bob</span>
+<span class="tag">Open Source Community Orientation (LFC102)</span>
+<span class="tag">AI Database Certificate</span>
+<span class="tag">Foundation Associate</span>
+<span class="tag">AI Interview Micro-Certificate</span>
+<span class="tag">Accelerate Your Job Search with AI</span>
+<span class="tag">Professional Networking for Career Growth</span>
+<span class="tag python">DataCamp: JavaScript (Basic &amp; Intermediate)</span>
+<span class="tag python">AWS Boto in Python</span>
+<span class="tag">Meal Essentials Certificate</span>
+</div></div></section>
 
-<section id="contact" class="contact">
-  <h2>Get in touch</h2>
-  <a href="https://github.com/myatnoewai9669-cmd" target="_blank" rel="noopener">GitHub: github.com/myatnoewai9669-cmd</a>
-  <a href="https://linkedin.com/in/myat-noe-wai-10a6b3406" target="_blank" rel="noopener">LinkedIn: linkedin.com/in/myat-noe-wai-10a6b3406</a>
-  <a href="https://myatnoewai9669-cmd.github.io" target="_blank" rel="noopener">Portfolio: myatnoewai9669-cmd.github.io</a>
-  <a href="https://myatnoewai123.blogspot.com" target="_blank" rel="noopener">Blog: myatnoewai123.blogspot.com</a>
-</section>
-</main>
-<footer>© 2026 Myat Noe Wai · Sukabumi, Indonesia</footer>
+<section id="language"><div class="container">
+<p class="section-label">Communication</p><div class="divider"></div>
+<h2 class="section-title">Languages</h2>
+<div class="lang-grid">
+<div class="lang-card"><p class="lang-name">Burmese</p><p class="lang-level">Native</p><div class="lang-bar-wrap"><div class="lang-bar" style="width:100%"></div></div></div>
+<div class="lang-card"><p class="lang-name">English</p><p class="lang-level">C1 · EF SET certified</p><div class="lang-bar-wrap"><div class="lang-bar" style="width:85%"></div></div></div>
+<div class="lang-card"><p class="lang-name">Indonesian</p><p class="lang-level">Basic</p><div class="lang-bar-wrap"><div class="lang-bar" style="width:35%"></div></div></div>
+</div></div></section>
+
+<section id="contact"><div class="container"><div class="contact-grid">
+<div class="contact-info">
+<p class="section-label">Contact</p><div class="divider"></div>
+<h2 class="section-title">Let's work together</h2>
+<p>Open to remote, full-time and freelance roles. Send a message or find me on the links here.</p>
+</div>
+<div class="contact-links">
+<a class="contact-link" href="mailto:myatmyatwai97@gmail.com"><span>✉️</span><span><span class="contact-link-title">Email</span><br><span class="contact-link-sub">myatmyatwai97@gmail.com</span></span></a>
+<a class="contact-link" href="https://github.com/myatnoewai9669-cmd" target="_blank" rel="noopener"><span>💻</span><span><span class="contact-link-title">GitHub</span><br><span class="contact-link-sub">github.com/myatnoewai9669-cmd</span></span></a>
+<a class="contact-link" href="https://linkedin.com/in/myat-noe-wai-10a6b3406" target="_blank" rel="noopener"><span>🔗</span><span><span class="contact-link-title">LinkedIn</span><br><span class="contact-link-sub">linkedin.com/in/myat-noe-wai-10a6b3406</span></span></a>
+<a class="contact-link" href="https://myatnoewai9669-cmd.github.io" target="_blank" rel="noopener"><span>🌐</span><span><span class="contact-link-title">Portfolio</span><br><span class="contact-link-sub">myatnoewai9669-cmd.github.io</span></span></a>
+<a class="contact-link" href="https://myatnoewai123.blogspot.com" target="_blank" rel="noopener"><span>✍️</span><span><span class="contact-link-title">Blog</span><br><span class="contact-link-sub">myatnoewai123.blogspot.com</span></span></a>
+</div></div></div></section>
+
+<footer>© 2026 <span>Myat Noe Wai</span> · Sukabumi, Indonesia</footer>
 </body>
 </html>
